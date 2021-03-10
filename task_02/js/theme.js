@@ -54,7 +54,7 @@
           }
 
           /* Random banner loader */
-          var banners = ['img/600ef8e9068dc_1097__Cat_Browse_Header_Desktop_trios-min.jpg', 'img/602bfb5698331_641__Homepage_Morganite_Header_Banner_2x-min.jpg'];
+          var banners = ['img/600ef8e9068dc_1097__Cat_Browse_Header_Desktop_trios-min.jpg', 'img/602bfb5698331_641__Homepage_Morganite_Header_Banner_2x-min1.jpg'];
           var banner = banners[Math.floor(Math.random() * 2)];
           var $banner = $('.one-page-banner');
           $banner.attr('src', banner);
