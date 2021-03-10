@@ -1,0 +1,102 @@
+.container {
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 1.5;
+    text-align: center;
+    color: #4a4a4a;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+
+    &__section-title {
+        font-size: 1.25em;
+        font-weight: bold;
+    }
+
+    &__section-descrpt, &__section-title {
+        padding: 0 1em;
+    }
+
+    &__image img {
+        width: 100%;
+    }
+
+    &__right &__section {
+        padding: 1em 0;
+        background: #fdf3ee;
+    }
+
+    &__right &__image img {
+        margin-top: -1.25em;
+    }
+}
+
+@media (min-width: 577px) {
+    .container {
+        max-width: 540px;
+        margin: auto;
+
+        &__left, &__right {
+            display: flex;
+            flex-direction: row;
+        }
+
+        &__left &__section {
+            order: 1;
+        }
+
+        &__section, &__image {
+            flex: 1 1 0px;
+            margin: auto;
+        }
+
+        &__right &__section {
+            flex: 1.5 1 0px;
+            padding: 0;
+        }
+
+        &__right &__image {
+            margin-left: -1em;
+        }
+    }
+}
+
+@media (min-width: 769px) {
+    .container {
+        max-width: 720px;
+
+        &__left &__section {
+            &:after {
+                display: block;
+                content: "";
+                width: 83px;
+                height: 62px;
+                background: transparent url('./images/group-12@2x.png') no-repeat;
+                background-size: contain;
+                margin: auto;
+            }
+        }
+
+        &__right &__section {
+            padding: 0;
+            background: white;
+            background-image: url("./images/mask.svg");
+            background-repeat: repeat-x;
+            background-size: contain;
+            background-position: left;
+        }
+    }
+}
+
+@media (min-width: 993px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1201px) {
+    .container {
+        max-width: 1140px;
+    }
+}
